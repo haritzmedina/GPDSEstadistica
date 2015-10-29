@@ -1,11 +1,7 @@
 package com.estadistica.examples;
 
-import datan.*;
-import datangraphics.*;
-
-import java.text.*;
-import java.util.*;
-import javax.swing.*;
+import datan.AnalysisOfVariance;
+import datan.DatanFrame;
 
 /**
 * Example demonstrating the use of class AnanysisOfVariance
