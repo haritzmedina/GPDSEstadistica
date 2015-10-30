@@ -1,4 +1,4 @@
-package com.estadistica.datan;
+package main.java.com.estadistica.datan;
 
 /**
 * A class with which a zero of a scalar monotonic function of a single variable is found

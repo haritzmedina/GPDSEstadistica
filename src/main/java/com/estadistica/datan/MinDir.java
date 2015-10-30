@@ -1,4 +1,4 @@
-package com.estadistica.datan;
+package main.java.com.estadistica.datan;
 
 /**
 * A class determining the minimum of a function along a straight line in n-dimensional space.

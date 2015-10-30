@@ -1,4 +1,4 @@
-package com.estadistica.datan;
+package main.java.com.estadistica.datan;
 
 /**
 * A class porforming the least-squares fit of a polynomial to a set of data.

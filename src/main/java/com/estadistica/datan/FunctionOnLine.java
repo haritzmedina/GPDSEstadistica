@@ -1,4 +1,4 @@
-package com.estadistica.datan;
+package main.java.com.estadistica.datan;
 
 /**
 * A class computing the value of a function at a given point on straight line in n-dimensional space.

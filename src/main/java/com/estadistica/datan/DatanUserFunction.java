@@ -1,4 +1,4 @@
-package com.estadistica.datan;
+package main.java.com.estadistica.datan;
 
 /**
 * An abstract class which has to be extended by the user to yield a class computing a scalar function

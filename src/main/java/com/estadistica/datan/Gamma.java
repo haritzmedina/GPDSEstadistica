@@ -1,4 +1,4 @@
-package com.estadistica.datan;
+package main.java.com.estadistica.datan;
 /** 
 * A class providing methods for computing the Gamma function and related functions
 * @author  Siegmund Brandt.

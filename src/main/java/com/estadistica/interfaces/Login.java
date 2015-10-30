@@ -72,6 +72,8 @@ public class Login {
                 if((new UserAccess()).userLogin(textField.getText(), textField_1.getText())){
                     // TODO open new window
                     textArea.append("Login correcto para usuario:"+textField.getText()+"\n");
+                    textArea.append("Abriendo menu para elección de programa\n");
+                    MenuElección me = new MenuElección();
                 }
                 else{
                     textArea.append("Login incorrecto para usuario: "+textField.getText()+"\n");

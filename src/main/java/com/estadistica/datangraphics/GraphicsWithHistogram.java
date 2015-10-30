@@ -1,4 +1,4 @@
-package com.estadistica.datangraphics;
+package main.java.com.estadistica.datangraphics;
 
 
 import datan.*;

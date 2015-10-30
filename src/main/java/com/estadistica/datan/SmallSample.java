@@ -1,4 +1,4 @@
-package com.estadistica.datan;
+package main.java.com.estadistica.datan;
 /** 
 * A class providing methods to compute confidence limits for small samples
 * @author  Siegmund Brandt.

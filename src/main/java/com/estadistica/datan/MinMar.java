@@ -1,4 +1,4 @@
-package com.estadistica.datan;
+package main.java.com.estadistica.datan;
 
 /**
 * A class determining the minimum of a function in n-dimensional space by Marquardt's method of.

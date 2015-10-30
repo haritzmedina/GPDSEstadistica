@@ -1,4 +1,4 @@
-package com.estadistica.datan;
+package main.java.com.estadistica.datan;
 
 /**
 * A class determining the extremum of a parabola through three points (xa,ya), (xb,yb),(xb,yc).

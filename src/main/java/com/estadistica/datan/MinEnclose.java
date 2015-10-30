@@ -1,4 +1,4 @@
-package com.estadistica.datan;
+package main.java.com.estadistica.datan;
 
 /**
 * A class trying to find an interval along a straight line in n-dimensional space which contains 

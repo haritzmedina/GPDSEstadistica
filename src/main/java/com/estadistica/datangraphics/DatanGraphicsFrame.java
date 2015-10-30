@@ -1,4 +1,4 @@
-package com.estadistica.datangraphics;
+package main.java.com.estadistica.datangraphics;
 
 import java.awt.*;
 import java.awt.event.*;

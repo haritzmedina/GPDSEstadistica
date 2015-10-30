@@ -3,7 +3,7 @@
 // Decompiler options: packimports(3) 
 // Source File Name:   DatanGraphics.java
 
-package com.estadistica.datangraphics;
+package main.java.com.estadistica.datangraphics;
 
 import datan.DatanUserFunction;
 import datan.Histogram;

@@ -1,4 +1,4 @@
-package com.estadistica.datan;
+package main.java.com.estadistica.datan;
 
 import javax.swing.*;
 import javax.swing.text.*;
