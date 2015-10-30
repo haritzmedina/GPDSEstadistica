@@ -44,7 +44,7 @@ public class Login {
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
 		
-		textField_1 = new JTextField();
+		textField_1 = new JPasswordField();
 		textField_1.setBounds(110, 150, 148, 20);
 		frame.getContentPane().add(textField_1);
 		textField_1.setColumns(10);
@@ -73,7 +73,7 @@ public class Login {
                     // TODO open new window
                     textArea.append("Login correcto para usuario:"+textField.getText()+"\n");
                     textArea.append("Abriendo menu para elección de programa\n");
-                    //MenuEleccion me = new MenuEleccion();
+                    MenuEleccion me = new MenuEleccion();
                 }
                 else{
                     textArea.append("Login incorrecto para usuario: "+textField.getText()+"\n");
