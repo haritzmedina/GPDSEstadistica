@@ -1,12 +1,19 @@
 package com.estadistica.solutions;
 
-import datan.*;
+//for action and window events
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.text.NumberFormat;
+import java.util.Locale;
 
-import java.text.*;
-import java.util.*;
-import javax.swing.*;
-import javax.swing.event.*;
-import java.awt.event.*;        //for action and window events
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
+import com.estadistica.datan.AnalysisOfVariance;
+import com.estadistica.datan.AuxJInputGroup;
+import com.estadistica.datan.AuxJNumberInput;
+import com.estadistica.datan.DatanFrame;
+import com.estadistica.datan.DatanRandom;
    
 /**
 * Performing an analysis of variance with crossed classification on simulated data

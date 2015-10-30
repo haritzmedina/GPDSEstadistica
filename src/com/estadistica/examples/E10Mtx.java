@@ -1,6 +1,8 @@
 package com.estadistica.examples;
 
-import datan.*;
+import datan.DatanFrame;
+import datan.DatanMatrix;
+import datan.DatanVector;
    
 /**
 * Example for the solution of the least squares problem with constraints
