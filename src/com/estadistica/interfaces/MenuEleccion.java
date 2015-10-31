@@ -56,43 +56,91 @@ public class MenuEleccion {
 		lblNewLabel.setBounds(10, 11, 679, 27);
 		frmElegirActividad.getContentPane().add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("Ejemplo1");
+		JButton btnNewButton = new JButton("Distribuciones uniformes");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				Login.getTextArea().append("Has elegido realizar el ejemplo1\n");
+				PlantillaEjemplo pe = new PlantillaEjemplo(1);
+				System.out.println(pe.getNumeroEjemplo());
 			}
 		});
-		btnNewButton.setBounds(47, 130, 89, 23);
+		btnNewButton.setBounds(47, 130, 206, 23);
 		frmElegirActividad.getContentPane().add(btnNewButton);
 		
 		JButton btnEjemplo = new JButton("Ejemplo2");
+		btnEjemplo.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Login.getTextArea().append("Has elegido realizar el ejemplo2\n");
+				PlantillaEjemplo pe = new PlantillaEjemplo(2);
+				pe.setNumeroEjemplo(2);
+			}
+		});
 		btnEjemplo.setBounds(47, 195, 89, 23);
 		frmElegirActividad.getContentPane().add(btnEjemplo);
 		
 		JButton btnEjemplo_1 = new JButton("Ejemplo3");
+		btnEjemplo_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Login.getTextArea().append("Has elegido realizar el ejemplo3\n");
+				PlantillaEjemplo pe = new PlantillaEjemplo(3);
+				pe.setNumeroEjemplo(3);
+			}
+		});
 		btnEjemplo_1.setBounds(47, 268, 89, 23);
 		frmElegirActividad.getContentPane().add(btnEjemplo_1);
 		
 		JButton btnEjemplo_2 = new JButton("Ejemplo4");
+		btnEjemplo_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Login.getTextArea().append("Has elegido realizar el ejemplo4\n");
+				PlantillaEjemplo pe = new PlantillaEjemplo(4);
+				pe.setNumeroEjemplo(4);
+			}
+		});
 		btnEjemplo_2.setBounds(47, 336, 89, 23);
 		frmElegirActividad.getContentPane().add(btnEjemplo_2);
 		
 		JButton btnEjemplo_3 = new JButton("Ejemplo5");
+		btnEjemplo_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Login.getTextArea().append("Has elegido realizar el ejemplo5\n");
+				PlantillaEjemplo pe = new PlantillaEjemplo(5);
+				pe.setNumeroEjemplo(5);
+			}
+		});
 		btnEjemplo_3.setBounds(552, 130, 89, 23);
 		frmElegirActividad.getContentPane().add(btnEjemplo_3);
 		
 		JButton button = new JButton("Ejemplo6");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Login.getTextArea().append("Has elegido realizar el ejemplo6\n");
+				PlantillaEjemplo pe = new PlantillaEjemplo(6);
+				pe.setNumeroEjemplo(6);
 			}
 		});
 		button.setBounds(552, 195, 89, 23);
 		frmElegirActividad.getContentPane().add(button);
 		
 		JButton button_1 = new JButton("Ejemplo7");
+		button_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Login.getTextArea().append("Has elegido realizar el ejemplo7\n");
+				PlantillaEjemplo pe = new PlantillaEjemplo(7);
+				pe.setNumeroEjemplo(7);
+			}
+		});
 		button_1.setBounds(552, 268, 89, 23);
 		frmElegirActividad.getContentPane().add(button_1);
 		
 		JButton button_2 = new JButton("Ejemplo8");
+		button_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Login.getTextArea().append("Has elegido realizar el ejemplo8\n");
+				PlantillaEjemplo pe = new PlantillaEjemplo(8);
+				pe.setNumeroEjemplo(8);
+			}
+		});
 		button_2.setBounds(552, 336, 89, 23);
 		frmElegirActividad.getContentPane().add(button_2);
 	}

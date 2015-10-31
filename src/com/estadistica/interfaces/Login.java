@@ -1,7 +1,6 @@
 package com.estadistica.interfaces;
 
 import com.estadistica.db.UserAccess;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,15 +12,28 @@ public class Login {
 	private JFrame frame;
 	private JTextField textField;
 	private JTextField textField_1;
+	private static JTextArea textArea;
+	private static Login miLogin;
 
 	//MÉTODOS
+	public static Login getLogin() {
+		if(miLogin == null) {
+			miLogin = new Login();
+		}
+		return miLogin;
+	}
+	
+	public static JTextArea getTextArea() {
+		return textArea;
+	}
+	
 	private void initialize() {
 		frame = new JFrame("Login");
 		frame.setBounds(100, 100, 705, 484);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JTextArea textArea = new JTextArea();
+		textArea = new JTextArea();
 		textArea.setBounds(0, 237, 689, 209);
 		frame.getContentPane().add(textArea);
 		
@@ -70,8 +82,7 @@ public class Login {
             @Override
             public void actionPerformed(ActionEvent e) {
                 if((new UserAccess()).userLogin(textField.getText(), textField_1.getText())){
-                    // TODO open new window
-                    textArea.append("Login correcto para usuario:"+textField.getText()+"\n");
+                    textArea.append("Login correcto para usuario: "+textField.getText()+"\n");
                     textArea.append("Abriendo menu para elección de programa\n");
                     MenuEleccion me = new MenuEleccion();
                 }
@@ -119,7 +130,7 @@ public class Login {
 	}
 
 	//CONSTRUCTOR
-	public Login() {
+	private Login() {
 		initialize();
 	}
 }
