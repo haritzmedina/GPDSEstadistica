@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class Login {
 
@@ -84,7 +85,12 @@ public class Login {
                 if((new UserAccess()).userLogin(textField.getText(), textField_1.getText())){
                     textArea.append("Login correcto para usuario: "+textField.getText()+"\n");
                     textArea.append("Abriendo menu para elección de programa\n");
-                    MenuEleccion me = new MenuEleccion();
+                    try {
+						MenuEleccion me = new MenuEleccion();
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
                 }
                 else{
                     textArea.append("Login incorrecto para usuario: "+textField.getText()+"\n");

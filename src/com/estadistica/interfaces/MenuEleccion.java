@@ -7,9 +7,18 @@ import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
+import javax.swing.JRadioButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextPane;
 
 public class MenuEleccion {
 
@@ -33,15 +42,17 @@ public class MenuEleccion {
 
 	/**
 	 * Create the application.
+	 * @throws IOException 
 	 */
-	public MenuEleccion() {
+	public MenuEleccion() throws IOException {
 		initialize();
 	}
 
 	/**
 	 * Initialize the contents of the frame.
+	 * @throws IOException 
 	 */
-	private void initialize() {
+	private void initialize() throws IOException {
 		frmElegirActividad = new JFrame();
 		frmElegirActividad.setTitle("Elegir actividad");
 		frmElegirActividad.setBounds(100, 100, 705, 484);
@@ -56,93 +67,46 @@ public class MenuEleccion {
 		lblNewLabel.setBounds(10, 11, 679, 27);
 		frmElegirActividad.getContentPane().add(lblNewLabel);
 		
-		JButton btnNewButton = new JButton("Distribuciones uniformes");
+		JButton btnNewButton = new JButton("N\u00FAmeros aleatorios");
+		btnNewButton.setFont(new Font("Modern No. 20", Font.PLAIN, 17));
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				Login.getTextArea().append("Has elegido realizar el ejemplo1\n");
-				PlantillaEjemplo pe = new PlantillaEjemplo(1);
+				NumerosAleatorios pe = new NumerosAleatorios(1);
 				System.out.println(pe.getNumeroEjemplo());
 			}
 		});
-		btnNewButton.setBounds(47, 130, 206, 23);
+		btnNewButton.setBounds(257, 161, 199, 23);
 		frmElegirActividad.getContentPane().add(btnNewButton);
 		
-		JButton btnEjemplo = new JButton("Ejemplo2");
-		btnEjemplo.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Login.getTextArea().append("Has elegido realizar el ejemplo2\n");
-				PlantillaEjemplo pe = new PlantillaEjemplo(2);
-				pe.setNumeroEjemplo(2);
-			}
-		});
-		btnEjemplo.setBounds(47, 195, 89, 23);
-		frmElegirActividad.getContentPane().add(btnEjemplo);
+    
 		
-		JButton btnEjemplo_1 = new JButton("Ejemplo3");
-		btnEjemplo_1.addActionListener(new ActionListener() {
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(0, 0, 2, 2);
+		frmElegirActividad.getContentPane().add(scrollPane);
+		
+		JButton btnDistribucionesYTeoremas = new JButton("Muestras");
+		btnDistribucionesYTeoremas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Login.getTextArea().append("Has elegido realizar el ejemplo3\n");
-				PlantillaEjemplo pe = new PlantillaEjemplo(3);
-				pe.setNumeroEjemplo(3);
+				Muestras pe = new Muestras(3);
+				System.out.println(pe.getNumeroEjemplo());
 			}
 		});
-		btnEjemplo_1.setBounds(47, 268, 89, 23);
-		frmElegirActividad.getContentPane().add(btnEjemplo_1);
+		btnDistribucionesYTeoremas.setFont(new Font("Modern No. 20", Font.PLAIN, 17));
+		btnDistribucionesYTeoremas.setBounds(257, 331, 199, 23);
+		frmElegirActividad.getContentPane().add(btnDistribucionesYTeoremas);
 		
-		JButton btnEjemplo_2 = new JButton("Ejemplo4");
-		btnEjemplo_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Login.getTextArea().append("Has elegido realizar el ejemplo4\n");
-				PlantillaEjemplo pe = new PlantillaEjemplo(4);
-				pe.setNumeroEjemplo(4);
-			}
-		});
-		btnEjemplo_2.setBounds(47, 336, 89, 23);
-		frmElegirActividad.getContentPane().add(btnEjemplo_2);
-		
-		JButton btnEjemplo_3 = new JButton("Ejemplo5");
-		btnEjemplo_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Login.getTextArea().append("Has elegido realizar el ejemplo5\n");
-				PlantillaEjemplo pe = new PlantillaEjemplo(5);
-				pe.setNumeroEjemplo(5);
-			}
-		});
-		btnEjemplo_3.setBounds(552, 130, 89, 23);
-		frmElegirActividad.getContentPane().add(btnEjemplo_3);
-		
-		JButton button = new JButton("Ejemplo6");
+		JButton button = new JButton("Distribuciones y teoremas importantes");
 		button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Login.getTextArea().append("Has elegido realizar el ejemplo6\n");
-				PlantillaEjemplo pe = new PlantillaEjemplo(6);
-				pe.setNumeroEjemplo(6);
+				Login.getTextArea().append("Has elegido realizar el ejemplo2\n");
+				DistribucionesYTeoremas pe = new DistribucionesYTeoremas(2);
+				System.out.println(pe.getNumeroEjemplo());
 			}
 		});
-		button.setBounds(552, 195, 89, 23);
+		button.setFont(new Font("Modern No. 20", Font.PLAIN, 17));
+		button.setBounds(200, 247, 302, 23);
 		frmElegirActividad.getContentPane().add(button);
-		
-		JButton button_1 = new JButton("Ejemplo7");
-		button_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Login.getTextArea().append("Has elegido realizar el ejemplo7\n");
-				PlantillaEjemplo pe = new PlantillaEjemplo(7);
-				pe.setNumeroEjemplo(7);
-			}
-		});
-		button_1.setBounds(552, 268, 89, 23);
-		frmElegirActividad.getContentPane().add(button_1);
-		
-		JButton button_2 = new JButton("Ejemplo8");
-		button_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Login.getTextArea().append("Has elegido realizar el ejemplo8\n");
-				PlantillaEjemplo pe = new PlantillaEjemplo(8);
-				pe.setNumeroEjemplo(8);
-			}
-		});
-		button_2.setBounds(552, 336, 89, 23);
-		frmElegirActividad.getContentPane().add(button_2);
 	}
-
 }
